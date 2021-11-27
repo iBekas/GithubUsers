@@ -3,13 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/JAVA/Android project/GithubUsers2/app/src/main/res/drawable/ic_no_photo_vector.xml" value="0.534375" />
+        <entry key="..\:/JAVA/Android project/GithubUsers2/app/src/main/res/layout/fragment_user_detail.xml" value="0.4846014492753623" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.2682291666666667" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
