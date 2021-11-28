@@ -4,14 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
 import ru.fylmr.poplibs_nov21.App
 import ru.fylmr.poplibs_nov21.R
 import ru.fylmr.poplibs_nov21.databinding.FragmentUserDetailBinding
-import ru.fylmr.poplibs_nov21.databinding.FragmentUsersBinding
-import ru.fylmr.poplibs_nov21.domain.GithubUsersRepository
 import ru.fylmr.poplibs_nov21.ui.base.BackButtonListener
 
 class UserDetailFragment : MvpAppCompatFragment(), DetailView, BackButtonListener {
