@@ -11,7 +11,7 @@ import ru.fylmr.poplibs_nov21.R
 import ru.fylmr.poplibs_nov21.databinding.FragmentUserDetailBinding
 import ru.fylmr.poplibs_nov21.ui.base.BackButtonListener
 
-class UserDetailFragment : MvpAppCompatFragment(), DetailView, BackButtonListener {
+class UserDetailFragment : MvpAppCompatFragment(), DetailView {
 
     companion object {
         const val KEY_GIT_USER = "KEY"
@@ -47,9 +47,9 @@ class UserDetailFragment : MvpAppCompatFragment(), DetailView, BackButtonListene
         binding.tvUserName.text = login ?: getString(R.string.unknown)
     }
 
-    override fun backPressed(): Boolean {
-        presenter.backPressed()
-        return false
-    }
+//    override fun backPressed(): Boolean {
+//        presenter.backPressed()
+//        return false
+//    }
 
 }
