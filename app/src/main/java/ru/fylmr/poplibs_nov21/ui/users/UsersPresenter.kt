@@ -18,7 +18,7 @@ class UsersPresenter(
 
         loadData()
 
-        usersListPresenter.itemClickListener = {} // todo
+        usersListPresenter.itemClickListener = {}
     }
 
     private fun loadData() {
@@ -37,7 +37,7 @@ class UsersPresenter(
 
         val users = mutableListOf<GithubUserModel>()
 
-        override var itemClickListener = { }
+        override var itemClickListener: (UserItemView) -> Unit = { }
 
         override fun getCount() = users.size
 
