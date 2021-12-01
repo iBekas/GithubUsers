@@ -4,6 +4,7 @@ import com.github.terrakok.cicerone.Router
 import moxy.MvpPresenter
 import ru.fylmr.poplibs_nov21.domain.GithubUsersRepository
 import ru.fylmr.poplibs_nov21.model.GithubUserModel
+import ru.fylmr.poplibs_nov21.screens.AppScreens
 import ru.fylmr.poplibs_nov21.ui.base.IListPresenter
 
 class UsersPresenter(
@@ -11,14 +12,12 @@ class UsersPresenter(
     private val usersRepository: GithubUsersRepository,
 ) : MvpPresenter<UsersView>() {
 
-    val usersListPresenter = UsersListPresenter()
+    val usersListPresenter = UsersListPresenter(router)
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
         loadData()
-
-        usersListPresenter.itemClickListener = {} // todo
     }
 
     private fun loadData() {
@@ -28,16 +27,17 @@ class UsersPresenter(
         viewState.updateList()
     }
 
-    fun backPressed(): Boolean {
-        router.exit()
-        return true
-    }
+//    fun backPressed(): Boolean {
+//        router.exit()
+//        return true
+//    }
 
-    class UsersListPresenter : IListPresenter<UserItemView> {
+    class UsersListPresenter(private val router: Router) : IListPresenter<UserItemView> {
 
         val users = mutableListOf<GithubUserModel>()
 
-        override var itemClickListener = { }
+        override var itemClickListener: (UserItemView) -> Unit =
+            { router.navigateTo(AppScreens.detailScreen(users[it.pos].login)) }
 
         override fun getCount() = users.size
 
