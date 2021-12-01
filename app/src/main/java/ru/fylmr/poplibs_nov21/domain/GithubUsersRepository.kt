@@ -1,6 +1,8 @@
 package ru.fylmr.poplibs_nov21.domain
 
+import io.reactivex.rxjava3.core.Observable
 import ru.fylmr.poplibs_nov21.model.GithubUserModel
+import java.util.concurrent.TimeUnit
 
 class GithubUsersRepository {
 
@@ -13,7 +15,11 @@ class GithubUsersRepository {
         GithubUserModel("user6"),
     )
 
-    fun getUsers(): List<GithubUserModel> {
-        return users
+    fun getUsers(): Observable<List<GithubUserModel>> {
+        return Observable.just(users)
+    }
+
+    fun intervalShowUsers(): Observable<Long> {
+        return Observable.interval(1, TimeUnit.SECONDS)
     }
 }

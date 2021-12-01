@@ -1,4 +1,4 @@
-package ru.fylmr.poplibs_nov21.ui.users
+package ru.fylmr.poplibs_nov21.ui.users.detail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,7 +22,9 @@ class UserDetailFragment : MvpAppCompatFragment(), DetailView, BackButtonListene
         }
     }
 
-    private val presenter by moxyPresenter { DetailPresenter(App.instance.router, arguments?.getString(KEY_GIT_USER)) }
+    private val presenter by moxyPresenter { DetailPresenter(App.instance.router, arguments?.getString(
+        KEY_GIT_USER
+    )) }
 
     private var _binding: FragmentUserDetailBinding? = null
     private val binding: FragmentUserDetailBinding
@@ -49,7 +51,7 @@ class UserDetailFragment : MvpAppCompatFragment(), DetailView, BackButtonListene
 
     override fun backPressed(): Boolean {
         presenter.backPressed()
-        return false
+        return true
     }
 
 }
