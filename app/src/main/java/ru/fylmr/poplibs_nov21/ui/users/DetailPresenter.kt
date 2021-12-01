@@ -11,8 +11,8 @@ class DetailPresenter(private val router: Router, private val login: String?): M
         viewState.bindUserLogin(login)
     }
 
-//    fun backPressed(): Boolean {
-//        router.backTo(AppScreens.usersScreen())
-//        return false
-//    }
+    fun backPressed(): Boolean {
+        router.backTo(AppScreens.usersScreen())
+        return false
+    }
 }

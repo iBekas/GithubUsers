@@ -13,7 +13,7 @@ import ru.fylmr.poplibs_nov21.domain.GithubUsersRepository
 import ru.fylmr.poplibs_nov21.ui.base.BackButtonListener
 import ru.fylmr.poplibs_nov21.ui.users.adapter.UsersAdapter
 
-class UsersFragment : MvpAppCompatFragment(), UsersView{
+class UsersFragment : MvpAppCompatFragment(), UsersView, BackButtonListener{
 
     private val presenter by moxyPresenter { UsersPresenter(App.instance.router, GithubUsersRepository()) }
 
@@ -41,8 +41,8 @@ class UsersFragment : MvpAppCompatFragment(), UsersView{
         adapter.notifyDataSetChanged()
     }
 
-//    override fun backPressed(): Boolean {
-//        presenter.backPressed()
-//        return true
-//    }
+    override fun backPressed(): Boolean {
+        presenter.backPressed()
+        return true
+    }
 }
