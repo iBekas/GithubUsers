@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/JAVA/Android project/GithubUsers2/app/src/main/res/drawable/ic_add_photo.xml" value="0.5385416666666667" />
+        <entry key="..\:/JAVA/Android project/GithubUsers2/app/src/main/res/drawable/ic_download.xml" value="0.5385416666666667" />
         <entry key="..\:/JAVA/Android project/GithubUsers2/app/src/main/res/drawable/ic_no_photo_vector.xml" value="0.534375" />
+        <entry key="..\:/JAVA/Android project/GithubUsers2/app/src/main/res/layout/activity_converter.xml" value="0.5223958333333333" />
+        <entry key="..\:/JAVA/Android project/GithubUsers2/app/src/main/res/layout/activity_main.xml" value="0.5223958333333333" />
+        <entry key="..\:/JAVA/Android project/GithubUsers2/app/src/main/res/layout/fragment_converter.xml" value="0.5223958333333333" />
         <entry key="..\:/JAVA/Android project/GithubUsers2/app/src/main/res/layout/fragment_user_detail.xml" value="0.4846014492753623" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.14895833333333333" />
