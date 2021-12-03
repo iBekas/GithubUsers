@@ -18,8 +18,4 @@ class GithubUsersRepository {
     fun getUsers(): Observable<List<GithubUserModel>> {
         return Observable.just(users)
     }
-
-    fun intervalShowUsers(): Observable<Long> {
-        return Observable.interval(1, TimeUnit.SECONDS)
-    }
 }
