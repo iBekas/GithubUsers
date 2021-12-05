@@ -23,15 +23,12 @@ class MainActivity : MvpAppCompatActivity(R.layout.activity_main), MainView {
         App.instance.navigationHolder.removeNavigator()
     }
 
-// А это вообще зачем здесь нужно?
-//    override fun onBackPressed() {
-//        super.onBackPressed()
-//
-//        supportFragmentManager.fragments.forEach {
-//            if (it is BackButtonListener && it.backPressed()) {
-//                return
-//            }
-//        }
-//        presenter.backPressed()
-//    }
+    override fun onBackPressed() {
+        supportFragmentManager.fragments.forEach {
+            if (it is BackButtonListener && it.backPressed()) {
+                return
+            }
+        }
+        presenter.backPressed()
+    }
 }

@@ -2,7 +2,7 @@ package ru.fylmr.poplibs_nov21.screens
 
 import android.os.Bundle
 import com.github.terrakok.cicerone.androidx.FragmentScreen
-import ru.fylmr.poplibs_nov21.ui.users.UserDetailFragment
+import ru.fylmr.poplibs_nov21.ui.users.detail.UserDetailFragment
 import ru.fylmr.poplibs_nov21.ui.users.UsersFragment
 
 object AppScreens {
